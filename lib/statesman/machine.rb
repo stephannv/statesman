@@ -39,6 +39,8 @@ module Statesman
           validate_initial_state(name)
           @initial_state = name
         end
+        const_set(name.upcase, name)
+
         states << name
       end
 

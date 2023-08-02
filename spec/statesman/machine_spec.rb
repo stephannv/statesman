@@ -13,6 +13,10 @@ describe Statesman::Machine do
 
     specify { expect(machine.states).to eq(%w[x y]) }
 
+    specify { expect(machine::X).to eq "x" }
+
+    specify { expect(machine::Y).to eq "y" }
+
     context "initial" do
       before { machine.state(:x, initial: true) }
 
